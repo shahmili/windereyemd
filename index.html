@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Eye MD — comprehensive ophthalmology in Bethlehem, Georgia.">
+<title>Eye MD</title>
+<style>
+:root{
+  --text:#253640;
+  --muted:#667780;
+  --blue:#3f7897;
+  --line:#d9e2e6;
+  --soft:#f6f9fa;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{
+  margin:0;
+  background:#fff;
+  color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:17px;
+  line-height:1.6;
+}
+a{color:var(--blue)}
+.wrap{width:min(960px,calc(100% - 40px));margin:0 auto}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  width:min(960px,calc(100% - 40px));
+  min-height:76px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+}
+.logo-link img{width:150px;height:auto;display:block}
+nav{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:22px;
+  flex-wrap:wrap;
+}
+nav a{
+  color:var(--text);
+  text-decoration:none;
+  font-size:15px;
+}
+nav a:hover{color:var(--blue)}
+
+main section{
+  padding:66px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.hero{padding:82px 0 58px}
+.hero-grid{
+  display:grid;
+  grid-template-columns:.82fr 1.18fr;
+  gap:50px;
+  align-items:center;
+}
+.hero-copy{
+  align-self:stretch;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.hero h1{
+  margin:0 0 18px;
+  font-size:44px;
+  line-height:1.08;
+  letter-spacing:.02em;
+  font-weight:400;
+  color:var(--blue);
+}
+.hero p{
+  margin:0 0 22px;
+  max-width:650px;
+  font-size:20px;
+  color:var(--muted);
+}
+.hero-links{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:2px;
+}
+.hero-links a{
+  text-decoration:none;
+  font-weight:bold;
+}
+.hero-image img{width:100%;height:auto;display:block}
+.hero p.new-patient-note{
+  display:block;
+  width:100%;
+  max-width:none;
+  margin:26px 0 0;
+  font-size:20px;
+  color:var(--muted);
+}
+
+h2{
+  margin:0 0 28px;
+  font-size:31px;
+  line-height:1.2;
+  font-weight:500;
+  letter-spacing:-.02em;
+}
+h3{margin:0 0 7px;font-size:20px;font-weight:600}
+p{color:var(--muted)}
+.columns{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.doctor-list{display:grid;gap:46px}
+.doctor-row{
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:34px;
+  align-items:start;
+}
+.doctor-photo img{
+  width:180px;
+  height:auto;
+  display:block;
+}
+.doctor-bio p{margin-top:0}
+
+.doctor-role{
+  color:var(--blue);
+  font-size:15px;
+  font-weight:bold;
+  margin:5px 0 13px;
+}
+
+.service-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0;
+  margin:0 0 30px;
+  color:var(--text);
+}
+.service-list div{
+  padding:0;
+  border:0;
+}
+.service-list div:not(:last-child)::after{
+  content:"·";
+  display:inline-block;
+  margin:0 9px;
+  color:var(--muted);
+}
+
+.cataract-intro{max-width:720px;margin-bottom:30px}
+.eye-care-intro{
+  max-width:760px;
+  margin-bottom:30px;
+}
+.eye-care-intro p{
+  margin:0 0 16px;
+}
+.videos{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:24px;
+}
+.video-item video{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:contain;
+  display:block;
+  background:#000;
+}
+.video-item h3{margin-top:11px;font-size:17px}
+
+.surgery-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+.surgery-grid img{width:100%;height:auto;display:block}
+
+.financing-grid{
+  display:grid;
+  grid-template-columns:1fr 200px;
+  gap:48px;
+  align-items:center;
+}
+.financing-logo{width:100%;max-width:200px;height:auto;display:block}
+.financing-links{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-top:18px;
+}
+.financing-links a{font-weight:bold;text-decoration:none}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:300px 1fr;
+  gap:48px;
+}
+.contact-details p{margin:0 0 18px}
+iframe{width:100%;min-height:350px;border:0}
+
+footer{
+  padding:28px 0 40px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+@media(max-width:760px){
+  .header-inner{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:8px;
+    padding:12px 0;
+  }
+  nav{justify-content:flex-start;gap:10px 16px}
+  .hero-grid,.columns,.doctor-row,.videos,.surgery-grid,.financing-grid,.contact-grid{
+    grid-template-columns:1fr;
+  }
+  .hero{padding-top:62px}
+  .videos{gap:34px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo-link" href="#home"><img src="assets/logo.jpg" alt="Eye MD"></a>
+    <nav>
+      <a href="#doctors">Doctors</a>
+      <a href="#eye-care">Eye Care</a>
+      <a href="#surgery-center">Surgery Center</a>
+      <a href="#financing">Financing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div>
+          <h1>EYE MD</h1>
+          <p>Medical and surgical treatment of eye disorders, including cataracts, glaucoma, dry eye, diabetic eye disease, and comprehensive ophthalmic care.</p>
+        </div>
+
+        <div class="hero-links">
+          <a href="tel:7708680101">770-868-0101</a>
+          <a href="#contact">14 Vision Street, Bethlehem, GA</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="assets/fulloffice.jpg" alt="Eye MD building in Bethlehem, Georgia">
+      </div>
+    </div>
+
+    <p class="new-patient-note"><strong>Now accepting new patients.</strong> Eye MD welcomes adults age 18 and older from Barrow, Clarke, Hall, Jackson, Gwinnett, Oconee, Walton, and neighboring counties.</p>
+  </div>
+</section>
+
+<section id="doctors">
+  <div class="wrap">
+    <h2>Doctors</h2>
+
+    <div class="doctor-list">
+      <div class="doctor-row">
+        <div class="doctor-photo">
+          <img src="assets/shah.jpg" alt="Manan I. Shah, MD">
+        </div>
+        <div class="doctor-bio">
+          <h3>Manan I. Shah, MD</h3>
+        <div class="doctor-role">Ophthalmologist</div>
+        <p>
+          Dr. Shah is originally from Tifton, Georgia. He earned his bachelor's degree in Biology from Emory University in Atlanta and his MD from Georgetown University School of Medicine in Washington, DC. He completed his ophthalmology residency at Loyola University Medical Center in Chicago, followed by a cornea fellowship at the University of Cincinnati. After practicing in New York and New Jersey for four years, he returned home to Georgia in 2010. He is a Fellow of the <a href="http://www.aao.org/" target="_blank" rel="noopener">American Academy of Ophthalmology</a> and is also board-certified by the <a href="http://www.abop.org/" target="_blank" rel="noopener">American Board of Ophthalmology</a>.
+        </p>
+        </div>
+      </div>
+
+      <div class="doctor-row">
+        <div class="doctor-photo">
+          <img src="assets/dhillon.jpg" alt="Baltej Dhillon, MD">
+        </div>
+        <div class="doctor-bio">
+          <h3>Baltej Dhillon, MD</h3>
+        <div class="doctor-role">Ophthalmologist</div>
+        <p>
+          Dr. Dhillon was born in Canada and raised primarily in Richmond, Virginia. He earned his MD from the University of Central Florida College of Medicine and completed his ophthalmology residency at Virginia Commonwealth University. He is passionate about patient-centered care and helping patients make informed decisions about their treatment. He joined Eye MD in August 2025. Outside of work, he enjoys spending time outdoors with his family, playing basketball and tennis, and traveling. Dr. Dhillon is fluent in Punjabi and Spanish.
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="eye-care">
+  <div class="wrap">
+    <h2>Eye Care</h2>
+
+    <div class="eye-care-intro">
+      <p>We specialize in comprehensive medical and surgical eye care, including the treatment of cataracts, glaucoma, dry eye, and diabetic eye disease, as well as comprehensive eye exams and optical services.</p>
+
+      <p>Cataract surgery is an important part of our practice. These short videos explain cataract surgery, how to prepare for your procedure, and lens replacement options.</p>
+    </div>
+
+    <div class="videos">
+      <div class="video-item">
+        <video controls preload="metadata">
+          <source src="assets/surgeryBasics.mp4" type="video/mp4">
+        </video>
+        <h3>Cataract Surgery Basics</h3>
+      </div>
+
+      <div class="video-item">
+        <video controls preload="metadata">
+          <source src="assets/prepareSurgery.mp4" type="video/mp4">
+        </video>
+        <h3>Preparing for Surgery</h3>
+      </div>
+
+      <div class="video-item">
+        <video controls preload="metadata">
+          <source src="assets/lensReplacement.mp4" type="video/mp4">
+        </video>
+        <h3>Lens Replacement</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="surgery-center">
+  <div class="wrap">
+    <div class="surgery-grid">
+      <div>
+        <h2>Eye MD Surgery Center</h2>
+        <p><strong>Now Open</strong></p>
+        <h3>Barrow County's First and Only Eye Surgery Center</h3>
+        <p>Cataract Surgery and Minimally Invasive Glaucoma Surgery</p>
+      </div>
+      <div>
+        <img src="assets/newOffice.jpg" alt="Eye MD Surgery Center">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="financing">
+  <div class="wrap">
+    <h2>Financing</h2>
+
+    <div class="financing-grid">
+      <div>
+        <h3>CareCredit</h3>
+        <p>
+          Eye MD offers CareCredit as a financing option for eligible vision procedures and services.
+          CareCredit allows patients to pay for healthcare expenses over time with monthly payments.
+        </p>
+        <ul>
+          <li>Low minimum monthly payments</li>
+          <li>No up-front costs or pre-payment penalties</li>
+        </ul>
+        <div class="financing-links">
+          <a href="https://www.carecredit.com/" target="_blank" rel="noopener">Learn about CareCredit</a>
+          <a href="https://www.carecredit.com/apply/confirm.html?light=1&amp;encm=XD0HPgZkVjNQbABkWm4OZwc9B2UCYQczVDIGMFI5Umc%3D" target="_blank" rel="noopener">Apply online</a>
+        </div>
+      </div>
+
+      <div>
+        <a href="https://www.carecredit.com/" target="_blank" rel="noopener">
+          <img src="assets/care.gif" alt="CareCredit" class="financing-logo">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+
+    <div class="contact-grid">
+      <div class="contact-details">
+        <h3>Eye MD</h3>
+        <p>14 Vision Street, Suite 100<br>Bethlehem, GA 30620</p>
+        <p><strong>Phone</strong><br><a href="tel:7708680101">770-868-0101</a></p>
+        <p><strong>Fax</strong><br>770-868-0151</p>
+        <p><a href="https://www.google.com/maps/search/?api=1&query=14+Vision+Street+Suite+100+Bethlehem+GA+30620">Get directions</a></p>
+      </div>
+
+      <iframe
+        title="Eye MD location"
+        loading="lazy"
+        src="https://www.google.com/maps?q=14%20Vision%20Street%20Suite%20100%20Bethlehem%20GA%2030620&output=embed">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">Eye MD · Bethlehem, Georgia</div>
+</footer>
+
+</body>
+</html>
