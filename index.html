@@ -534,6 +534,22 @@ h3{
   }
 }
 
+
+/* Keep anchored section headings visible below the taller sticky header */
+html{
+  scroll-padding-top:145px;
+}
+
+@media (max-width:760px){
+  html{
+    scroll-padding-top:155px;
+  }
+
+  main section[id]{
+    scroll-margin-top:155px;
+  }
+}
+
 </style>
 </head>
 <body>
