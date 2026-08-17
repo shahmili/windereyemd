@@ -3,429 +3,218 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Eye MD — comprehensive ophthalmology in Bethlehem, Georgia.">
-<title>Eye MD</title>
+<meta name="description" content="Eye MD of Winder — comprehensive medical and surgical eye care in Bethlehem, Georgia.">
+<title>Eye MD of Winder</title>
 <style>
-:root{
-  --text:#253640;
-  --muted:#667780;
-  --blue:#3f7897;
-  --line:#d9e2e6;
-  --soft:#f6f9fa;
+:root {
+  --blue:#386f9f;
+  --text:#23323a;
+  --muted:#66757d;
+  --line:#dfe6e9;
+  --soft:#f7f9fa;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:86px}
-body{
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:105px; }
+body {
   margin:0;
-  background:#fff;
   color:var(--text);
-  font-family:Arial,Helvetica,sans-serif;
+  background:#fff;
+  font-family:Arial, Helvetica, sans-serif;
   font-size:17px;
   line-height:1.6;
 }
-a{color:var(--blue)}
-.wrap{width:min(960px,calc(100% - 40px));margin:0 auto}
+a { color:var(--blue); }
+.wrap { width:min(960px, calc(100% - 40px)); margin:0 auto; }
 
-header{
+header {
   position:sticky;
   top:0;
-  z-index:20;
-  background:rgba(255,255,255,.97);
+  z-index:10;
+  background:rgba(255,255,255,.98);
   border-bottom:1px solid var(--line);
 }
-.header-inner{
-  width:min(960px,calc(100% - 40px));
-  min-height:76px;
+.header-inner {
+  width:min(960px, calc(100% - 40px));
   margin:0 auto;
+  min-height:82px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:28px;
+  gap:30px;
 }
-.logo-link img{width:150px;height:auto;display:block}
-nav{
+.logo-link { display:block; line-height:0; }
+.logo-link img { width:155px; height:auto; display:block; }
+nav {
   display:flex;
   align-items:center;
   justify-content:flex-end;
   gap:22px;
   flex-wrap:wrap;
 }
-nav a{
-  color:var(--text);
-  text-decoration:none;
-  font-size:15px;
-}
-nav a:hover{color:var(--blue)}
+nav a { color:var(--text); text-decoration:none; font-size:15px; }
+nav a:hover { color:var(--blue); }
 
-main section{
-  padding:66px 0;
-  border-bottom:1px solid var(--line);
-}
-
-.hero{padding:82px 0 58px}
-.hero-grid{
+section { padding:72px 0; border-bottom:1px solid var(--line); }
+.hero { padding:90px 0 86px; }
+.hero-grid {
   display:grid;
   grid-template-columns:.82fr 1.18fr;
-  gap:50px;
+  gap:52px;
   align-items:center;
 }
-.hero-copy{
-  align-self:stretch;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-}
-.hero h1{
+.hero h1 {
   margin:0 0 18px;
-  font-size:44px;
-  line-height:1.08;
-  letter-spacing:.02em;
-  font-weight:400;
-  color:var(--blue);
-}
-.hero p{
-  margin:0 0 22px;
-  max-width:650px;
-  font-size:20px;
-  color:var(--muted);
-}
-.hero-links{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  gap:2px;
-}
-.hero-links a{
-  text-decoration:none;
-  font-weight:bold;
-}
-.hero-image img{width:100%;height:auto;display:block}
-.hero p.new-patient-note{
-  display:block;
-  width:100%;
-  max-width:none;
-  margin:26px 0 0;
-  font-size:20px;
-  color:var(--muted);
-}
-
-h2{
-  margin:0 0 28px;
-  font-size:31px;
-  line-height:1.2;
+  font-size:clamp(44px, 7vw, 72px);
+  line-height:1.02;
+  letter-spacing:-.04em;
   font-weight:500;
-  letter-spacing:-.02em;
 }
-h3{margin:0 0 7px;font-size:20px;font-weight:600}
-p{color:var(--muted)}
-.columns{display:grid;grid-template-columns:1fr 1fr;gap:60px}
-.doctor-list{display:grid;gap:46px}
-.doctor-row{
+.hero .kicker { color:var(--blue); font-size:15px; font-weight:bold; letter-spacing:.04em; margin-bottom:12px; }
+.hero p { max-width:650px; font-size:20px; color:var(--muted); margin:0 0 24px; }
+.hero-links { display:flex; gap:22px; flex-wrap:wrap; }
+.hero-links a { text-decoration:none; font-weight:bold; }
+.hero-image img { width:100%; display:block; height:auto; }
+
+h2 { margin:0 0 28px; font-size:31px; line-height:1.2; font-weight:500; letter-spacing:-.02em; }
+h3 { margin:0 0 7px; font-size:20px; }
+p { margin:0 0 18px; color:var(--muted); }
+.columns { display:grid; grid-template-columns:1fr 1fr; gap:55px; }
+.doctor {
   display:grid;
-  grid-template-columns:180px 1fr;
-  gap:34px;
+  grid-template-columns:130px 1fr;
+  gap:24px;
   align-items:start;
 }
-.doctor-photo img{
-  width:180px;
-  height:auto;
-  display:block;
-}
-.doctor-bio p{margin-top:0}
+.doctor img { width:130px; height:160px; object-fit:cover; object-position:top; display:block; }
+.role { color:var(--blue); font-size:14px; font-weight:bold; margin-bottom:11px; }
 
-.doctor-role{
-  color:var(--blue);
-  font-size:15px;
-  font-weight:bold;
-  margin:5px 0 13px;
-}
+#cataracts { background:var(--soft); }
+#cataracts .wrap { width:min(960px, calc(100% - 40px)); }
+.intro { max-width:780px; }
+.videos { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin-top:34px; }
+.video-item video { width:100%; aspect-ratio:16/9; object-fit:contain; display:block; background:#000; }
+.video-item h3 { margin-top:12px; font-size:17px; }
 
-.service-list{
-  display:flex;
-  flex-wrap:wrap;
-  gap:0;
-  margin:0 0 30px;
-  color:var(--text);
-}
-.service-list div{
-  padding:0;
-  border:0;
-}
-.service-list div:not(:last-child)::after{
-  content:"·";
-  display:inline-block;
-  margin:0 9px;
-  color:var(--muted);
-}
+.service-list { display:grid; grid-template-columns:1fr 1fr; border-top:1px solid var(--line); }
+.service-list div { padding:13px 0; border-bottom:1px solid var(--line); }
+.service-list div:nth-child(odd) { padding-right:30px; }
 
-.cataract-intro{max-width:720px;margin-bottom:30px}
-.eye-care-intro{
-  max-width:760px;
-  margin-bottom:30px;
-}
-.eye-care-intro p{
-  margin:0 0 16px;
-}
-.videos{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:24px;
-}
-.video-item video{
-  width:100%;
-  aspect-ratio:16/9;
-  object-fit:contain;
-  display:block;
-  background:#000;
-}
-.video-item h3{margin-top:11px;font-size:17px}
-
-.surgery-grid{
+.optical-grid, .surgery-grid {
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:50px;
-  align-items:center;
-}
-.surgery-grid img{width:100%;height:auto;display:block}
-
-.financing-grid{
-  display:grid;
-  grid-template-columns:1fr 200px;
   gap:48px;
   align-items:center;
 }
-.financing-logo{width:100%;max-width:200px;height:auto;display:block}
-.financing-links{
-  display:flex;
-  gap:16px;
-  flex-wrap:wrap;
-  margin-top:18px;
-}
-.financing-links a{font-weight:bold;text-decoration:none}
+.optical-grid img, .surgery-grid img { width:100%; display:block; }
 
-.contact-grid{
-  display:grid;
-  grid-template-columns:300px 1fr;
-  gap:48px;
-}
-.contact-details p{margin:0 0 18px}
-iframe{width:100%;min-height:350px;border:0}
+.contact-grid { display:grid; grid-template-columns:300px 1fr; gap:48px; }
+.contact-details p { margin:0 0 16px; }
+iframe { width:100%; min-height:350px; border:0; }
 
-footer{
-  padding:28px 0 40px;
-  color:var(--muted);
-  font-size:14px;
+footer { padding:28px 0 38px; color:var(--muted); font-size:14px; }
+
+@media (max-width:820px) {
+  .header-inner { align-items:flex-start; flex-direction:column; gap:10px; padding:12px 0; }
+  nav { justify-content:flex-start; gap:10px 18px; }
+  .hero-grid, .columns, .optical-grid, .surgery-grid, .contact-grid { grid-template-columns:1fr; }
+  .hero { padding-top:65px; }
+  .hero-image { max-width:520px; }
+  .videos { grid-template-columns:1fr; gap:38px; }
+  .doctor { grid-template-columns:105px 1fr; }
+  .doctor img { width:105px; height:135px; }
 }
 
-@media(max-width:760px){
-  .header-inner{
-    align-items:center;
-    flex-direction:column;
-    gap:8px;
-    padding:10px 0 9px;
-  }
-  .logo-link img{width:125px}
-  nav{
-    width:100%;
-    display:grid;
-    grid-template-columns:repeat(6,1fr);
-    gap:4px 8px;
-    justify-content:stretch;
-    text-align:center;
-  }
-  nav a{font-size:14px;white-space:nowrap}
-  nav a:nth-child(1){grid-column:1 / 3}
-  nav a:nth-child(2){grid-column:3 / 5}
-  nav a:nth-child(3){grid-column:5 / 7}
-  nav a:nth-child(4){grid-column:2 / 4}
-  nav a:nth-child(5){grid-column:4 / 6}
-  .hero-grid,.columns,.doctor-row,.videos,.surgery-grid,.financing-grid,.contact-grid{
-    grid-template-columns:1fr;
-  }
-  .hero-copy{min-height:0;gap:22px}
-  .hero{padding-top:52px}
-  .videos{gap:34px}
+@media (max-width:520px) {
+  .wrap, #cataracts .wrap, .header-inner { width:calc(100% - 28px); }
+  nav { font-size:14px; }
+  .doctor { grid-template-columns:1fr; }
+  .doctor img { width:130px; height:160px; }
+  .service-list { grid-template-columns:1fr; }
 }
-
-@media (max-width:760px) {
-  .header-inner {
-    width:100%;
-    margin:0;
-    padding:12px 14px 10px;
-    display:flex;
-    flex-direction:column;
-    align-items:center !important;
-    justify-content:center !important;
-    text-align:center;
-  }
-
-  .logo-link {
-    display:block;
-    margin:0 auto 4px;
-  }
-
-  .logo-link img {
-    width:125px;
-    margin:0 auto;
-  }
-
-  header nav {
-    width:100%;
-    margin:0 auto;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center !important;
-    align-items:center;
-    gap:4px 16px;
-    text-align:center;
-  }
-
-  header nav a {
-    display:inline-block;
-    margin:0;
-    text-align:center;
-  }
-}
-
-
-@media (max-width:760px) {
-  header .header-inner {
-    width:100% !important;
-    max-width:none !important;
-    padding-left:0 !important;
-    padding-right:0 !important;
-  }
-
-  header .logo-link {
-    width:100% !important;
-    display:flex !important;
-    justify-content:center !important;
-    align-items:center !important;
-    margin:0 !important;
-    padding:0 !important;
-    text-align:center !important;
-  }
-
-  header .logo-link img {
-    display:block !important;
-    width:125px !important;
-    margin:0 auto !important;
-    position:relative;
-    left:0;
-  }
-
-  header nav {
-    width:100% !important;
-    justify-content:center !important;
-    text-align:center !important;
-  }
-}
-
 </style>
 </head>
 <body>
 
 <header>
   <div class="header-inner">
-    <a class="logo-link" href="#home"><img src="assets/logo.jpg" alt="Eye MD"></a>
+    <a class="logo-link" href="#home"><img src="assets/logo.jpg" alt="Eye MD logo"></a>
     <nav>
       <a href="#doctors">Doctors</a>
-      <a href="#eye-care">Eye Care</a>
-      <a href="#surgery-center">Surgery Center</a>
-      <a href="#financing">Financing</a>
+      <a href="#cataracts">Cataracts</a>
+      <a href="#services">Eye Care</a>
+      <a href="#optical">Optical</a>
+      <a href="#surgery">Surgery Center</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
 <main>
-
 <section class="hero" id="home">
-  <div class="wrap">
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <div>
-          <h1>EYE MD</h1>
-          <p>Medical and surgical treatment of eye disorders, including cataracts, glaucoma, dry eye, diabetic eye disease, and comprehensive ophthalmic care.</p>
-        </div>
-
-        <div class="hero-links">
-          <a href="tel:7708680101">770-868-0101</a>
-          <a href="#contact">14 Vision Street, Bethlehem, GA</a>
-        </div>
-      </div>
-
-      <div class="hero-image">
-        <img src="assets/fulloffice.jpg" alt="Eye MD building in Bethlehem, Georgia">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>EYE MD</h1>
+      <p>Medical and surgical treatment of eye disorders, including cataracts, glaucoma, dry eye, diabetic eye disease, and comprehensive ophthalmic care.</p>
+      <div class="hero-links">
+        <a href="tel:7708680101">770-868-0101</a>
+        <a href="#contact">14 Vision Street, Bethlehem, GA</a>
       </div>
     </div>
-
-    <p class="new-patient-note"><strong>Now accepting new patients.</strong> Eye MD welcomes adults age 18 and older from Barrow, Clarke, Hall, Jackson, Gwinnett, Oconee, Walton, and neighboring counties.</p>
+    <div class="hero-image">
+      <img src="assets/fulloffice.jpg" alt="Eye MD building in Bethlehem, Georgia">
+    </div>
   </div>
 </section>
 
 <section id="doctors">
   <div class="wrap">
     <h2>Doctors</h2>
-
-    <div class="doctor-list">
-      <div class="doctor-row">
-        <div class="doctor-photo">
-          <img src="assets/shah.jpg" alt="Manan I. Shah, MD">
-        </div>
-        <div class="doctor-bio">
+    <div class="columns">
+      <div class="doctor">
+        <img src="assets/shah.jpg" alt="Manan I. Shah, MD">
+        <div>
           <h3>Manan I. Shah, MD</h3>
-        <div class="doctor-role">Ophthalmologist</div>
-        <p>
-          Dr. Shah is originally from Tifton, Georgia. He earned his bachelor's degree in Biology from Emory University in Atlanta and his MD from Georgetown University School of Medicine in Washington, DC. He completed his ophthalmology residency at Loyola University Medical Center in Chicago, followed by a cornea fellowship at the University of Cincinnati. After practicing in New York and New Jersey for four years, he returned home to Georgia in 2010. He is a Fellow of the <a href="http://www.aao.org/" target="_blank" rel="noopener">American Academy of Ophthalmology</a> and is also board-certified by the <a href="http://www.abop.org/" target="_blank" rel="noopener">American Board of Ophthalmology</a>.
-        </p>
+          <div class="role">Board-Certified Ophthalmologist</div>
+          <p>Dr. Shah is originally from Tifton, Georgia. He earned his bachelor's degree at Emory University and his MD at Georgetown University School of Medicine. He completed ophthalmology residency at Loyola University Medical Center and a cornea fellowship at the University of Cincinnati.</p>
         </div>
       </div>
-
-      <div class="doctor-row">
-        <div class="doctor-photo">
-          <img src="assets/dhillon.jpg" alt="Baltej Dhillon, MD">
-        </div>
-        <div class="doctor-bio">
+      <div class="doctor">
+        <img src="assets/dhillon.jpg" alt="Baltej Dhillon, MD">
+        <div>
           <h3>Baltej Dhillon, MD</h3>
-        <div class="doctor-role">Ophthalmologist</div>
-        <p>
-          Dr. Dhillon was born in Canada and raised primarily in Richmond, Virginia. He earned his MD from the University of Central Florida College of Medicine and completed his ophthalmology residency at Virginia Commonwealth University. He is passionate about patient-centered care and helping patients make informed decisions about their treatment. He joined Eye MD in August 2025. Outside of work, he enjoys spending time outdoors with his family, playing basketball and tennis, and traveling. Dr. Dhillon is fluent in Punjabi and Spanish.
-        </p>
+          <div class="role">Ophthalmologist</div>
+          <p>Dr. Dhillon earned his MD at the University of Central Florida College of Medicine and completed ophthalmology residency at Virginia Commonwealth University. He joined Eye MD in August 2025 and is fluent in Punjabi and Spanish.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="eye-care">
+<section id="cataracts">
   <div class="wrap">
-    <h2>Eye Care</h2>
-
-    <div class="eye-care-intro">
-      <p>We specialize in comprehensive medical and surgical eye care, including the treatment of cataracts, glaucoma, dry eye, and diabetic eye disease, as well as comprehensive eye exams and optical services.</p>
-
-      <p>Cataract surgery is an important part of our practice. These short videos explain cataract surgery, how to prepare for your procedure, and lens replacement options.</p>
+    <h2>Cataract Surgery</h2>
+    <div class="intro">
+      <p>Cataracts are a common age-related change in the eye's natural lens. These short videos explain cataract surgery, how to prepare, and how lens replacement works.</p>
     </div>
-
     <div class="videos">
       <div class="video-item">
         <video controls preload="metadata">
           <source src="assets/surgeryBasics.mp4" type="video/mp4">
+          Your browser does not support the video tag.
         </video>
         <h3>Cataract Surgery Basics</h3>
       </div>
-
       <div class="video-item">
         <video controls preload="metadata">
           <source src="assets/prepareSurgery.mp4" type="video/mp4">
+          Your browser does not support the video tag.
         </video>
         <h3>Preparing for Surgery</h3>
       </div>
-
       <div class="video-item">
         <video controls preload="metadata">
           <source src="assets/lensReplacement.mp4" type="video/mp4">
+          Your browser does not support the video tag.
         </video>
         <h3>Lens Replacement</h3>
       </div>
@@ -433,48 +222,38 @@ footer{
   </div>
 </section>
 
-<section id="surgery-center">
+<section id="services">
   <div class="wrap">
-    <div class="surgery-grid">
-      <div>
-        <h2>Eye MD Surgery Center</h2>
-        <p><strong>Now Open</strong></p>
-        <h3>Barrow County's First and Only Eye Surgery Center</h3>
-        <p>Cataract Surgery and Minimally Invasive Glaucoma Surgery</p>
-      </div>
-      <div>
-        <img src="assets/newOffice.jpg" alt="Eye MD Surgery Center">
-      </div>
+    <h2>Eye Care</h2>
+    <div class="service-list">
+      <div>Cataracts</div>
+      <div>Glaucoma</div>
+      <div>Dry Eye</div>
+      <div>Diabetic Eye Disease</div>
+      <div>Comprehensive Eye Exams</div>
+      <div>Medical and Surgical Eye Care</div>
     </div>
   </div>
 </section>
 
-<section id="financing">
-  <div class="wrap">
-    <h2>Financing</h2>
+<section id="optical">
+  <div class="wrap optical-grid">
+    <div>
+      <h2>Optical / Glasses</h2>
+      <p>Eye MD of Winder has an on-site full-service optical shop with hundreds of frames, from affordable house brands to designer frames.</p>
+      <p>Licensed opticians can help select and adjust glasses to suit your prescription, visual needs, and daily activities.</p>
+    </div>
+    <img src="assets/optical.jpg" alt="Eye MD optical shop">
+  </div>
+</section>
 
-    <div class="financing-grid">
-      <div>
-        <h3>CareCredit</h3>
-        <p>
-          Eye MD offers CareCredit as a financing option for eligible vision procedures and services.
-          CareCredit allows patients to pay for healthcare expenses over time with monthly payments.
-        </p>
-        <ul>
-          <li>Low minimum monthly payments</li>
-          <li>No up-front costs or pre-payment penalties</li>
-        </ul>
-        <div class="financing-links">
-          <a href="https://www.carecredit.com/" target="_blank" rel="noopener">Learn about CareCredit</a>
-          <a href="https://www.carecredit.com/apply/confirm.html?light=1&amp;encm=XD0HPgZkVjNQbABkWm4OZwc9B2UCYQczVDIGMFI5Umc%3D" target="_blank" rel="noopener">Apply online</a>
-        </div>
-      </div>
-
-      <div>
-        <a href="https://www.carecredit.com/" target="_blank" rel="noopener">
-          <img src="assets/care.gif" alt="CareCredit" class="financing-logo">
-        </a>
-      </div>
+<section id="surgery">
+  <div class="wrap surgery-grid">
+    <img src="assets/newOffice.jpg" alt="Eye MD surgery center">
+    <div>
+      <h2>Eye MD Surgery Center</h2>
+      <p><strong>Barrow County's first and only eye surgery center.</strong></p>
+      <p>Cataract surgery and minimally invasive glaucoma surgery are available locally in Bethlehem.</p>
     </div>
   </div>
 </section>
@@ -482,29 +261,22 @@ footer{
 <section id="contact">
   <div class="wrap">
     <h2>Contact</h2>
-
     <div class="contact-grid">
       <div class="contact-details">
-        <h3>Eye MD</h3>
+        <h3>Eye MD of Winder</h3>
         <p>14 Vision Street, Suite 100<br>Bethlehem, GA 30620</p>
         <p><strong>Phone</strong><br><a href="tel:7708680101">770-868-0101</a></p>
         <p><strong>Fax</strong><br>770-868-0151</p>
         <p><a href="https://www.google.com/maps/search/?api=1&query=14+Vision+Street+Suite+100+Bethlehem+GA+30620">Get directions</a></p>
       </div>
-
-      <iframe
-        title="Eye MD location"
-        loading="lazy"
-        src="https://www.google.com/maps?q=14%20Vision%20Street%20Suite%20100%20Bethlehem%20GA%2030620&output=embed">
-      </iframe>
+      <iframe title="Eye MD location" loading="lazy" src="https://www.google.com/maps?q=14%20Vision%20Street%20Suite%20100%20Bethlehem%20GA%2030620&output=embed"></iframe>
     </div>
   </div>
 </section>
-
 </main>
 
 <footer>
-  <div class="wrap">Eye MD · Bethlehem, Georgia</div>
+  <div class="wrap">Manan I Shah MD PC Ophthalmology · 14 Vision Street, Suite 100, Bethlehem, GA 30620 · 770-868-0101</div>
 </footer>
 
 </body>
