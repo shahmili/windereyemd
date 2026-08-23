@@ -185,16 +185,26 @@ p{color:var(--muted)}
 }
 .video-item h3{margin-top:14px;font-size:19px;line-height:1.35}
 
+.surgery-subtitle{
+  white-space:nowrap;
+  margin-bottom:24px;
+}
+
 .surgery-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:50px;
-  align-items:start;
+  align-items:center;
 }
-.surgery-grid img{width:100%;height:auto;display:block}
+
+.surgery-grid img{
+  width:100%;
+  height:auto;
+  display:block;
+}
 
 .surgery-services{
-  margin:16px 0 0;
+  margin:0;
   padding-left:24px;
   color:var(--muted);
 }
@@ -212,6 +222,12 @@ p{color:var(--muted)}
 
 .surgery-services > li > ul li{
   margin:3px 0;
+}
+
+@media(max-width:760px){
+  .surgery-subtitle{
+    white-space:normal;
+  }
 }
   
 .contact-grid{
@@ -624,7 +640,7 @@ html{
           <h3>Manan I. Shah, MD</h3>
         <div class="doctor-role">Ophthalmologist</div>
         <p>
-          Dr. Shah is originally from Tifton, Georgia. He earned his bachelor's degree in Biology from Emory University in Atlanta and his MD from Georgetown University School of Medicine in Washington, DC. He completed his ophthalmology residency at Loyola University Medical Center in Chicago, followed by a cornea fellowship at the University of Cincinnati. After practicing in New York and New Jersey for four years, he returned home to Georgia in 2010. He is a Fellow of the <a href="http://www.aao.org/" target="_blank" rel="noopener">American Academy of Ophthalmology</a> and is also board-certified by the <a href="http://www.abop.org/" target="_blank" rel="noopener">American Board of Ophthalmology</a>.
+          Dr. Shah is originally from Tifton, Georgia. He earned his bachelor's degree in Biology from Emory University in Atlanta and his MD from Georgetown University School of Medicine in Washington, DC. He completed his ophthalmology residency at Loyola University Medical Center in Chicago, followed by a cornea fellowship at the University of Cincinnati. After practicing in New York and New Jersey for four years, he returned home to Georgia in 2010. He is a Fellow of the <a href="https://www.aao.org/" target="_blank" rel="noopener">American Academy of Ophthalmology</a> and is also board-certified by the <a href="https://www.abop.org/" target="_blank" rel="noopener">American Board of Ophthalmology</a>.
         </p>
         </div>
       </div>
@@ -682,49 +698,54 @@ html{
 
 <section id="surgery-center">
   <div class="wrap">
+
+    <h2>Eye MD Surgery Center</h2>
+    <h3 class="surgery-subtitle">
+      Barrow County's First and Only Eye Ambulatory Surgery Center (ASC)
+    </h3>
+
     <div class="surgery-grid">
-<div>
-  <h2>Eye MD Surgery Center</h2>
-  <h3>Barrow County's First and Only Eye Ambulatory Surgery Center (ASC)</h3>
+      <div>
+        <ul class="surgery-services">
+          <li>
+            Cataract Surgery
+            <ul>
+              <li>Standard Intraocular Lens (IOL)</li>
+              <li>Astigmatism Correction</li>
+              <li>Premium Multifocal Intraocular Lens (IOL)</li>
+            </ul>
+          </li>
 
-  <ul class="surgery-services">
-    <li>
-      Cataract Surgery
-      <ul>
-        <li>Standard Intraocular Lens (IOL)</li>
-        <li>Astigmatism Correction</li>
-        <li>Premium Multifocal Intraocular Lens (IOL)</li>
-      </ul>
-    </li>
+          <li>
+            Minimally Invasive Glaucoma Surgery
+            <ul>
+              <li>Laser Glaucoma Surgery</li>
+              <li>Goniotomy</li>
+              <li>
+                Glaucoma Medication Implantation, including
+                <a href="https://www.durysta.com/" target="_blank" rel="noopener">Durysta</a>
+                and
+                <a href="https://www.idosetr.com/" target="_blank" rel="noopener">iDose TR</a>
+              </li>
+            </ul>
+          </li>
 
-    <li>
-      Minimally Invasive Glaucoma Surgery
-      <ul>
-        <li>Laser Glaucoma Surgery</li>
-        <li>Goniotomy</li>
-        <li>
-          Glaucoma Medication Implantation, including
-          <a href="https://www.durysta.com/" target="_blank" rel="noopener">Durysta</a>
-          and
-          <a href="https://www.idosetr.com/" target="_blank" rel="noopener">iDose TR</a>
-        </li>
-      </ul>
-    </li>
+          <li>
+            Eyelid Surgery
+            <ul>
+              <li>Blepharoplasty</li>
+              <li>Entropion and Ectropion Correction</li>
+              <li>Eyelid Lesion Excision</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
 
-    <li>
-      Eyelid Surgery
-      <ul>
-        <li>Blepharoplasty</li>
-        <li>Entropion and Ectropion Correction</li>
-        <li>Eyelid Lesion Excision</li>
-      </ul>
-    </li>
-  </ul>
-</div>
       <div>
         <img src="assets/newOffice.jpg" alt="Eye MD Surgery Center">
       </div>
     </div>
+
   </div>
 </section>
 
