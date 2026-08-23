@@ -193,6 +193,16 @@ p{color:var(--muted)}
 }
 .surgery-grid img{width:100%;height:auto;display:block}
 
+.surgery-services{
+  margin:16px 0 0;
+  padding-left:24px;
+  color:var(--muted);
+}
+
+.surgery-services li{
+  margin:5px 0;
+}
+  
 .contact-grid{
   display:grid;
   grid-template-columns:300px 1fr;
@@ -664,9 +674,12 @@ html{
     <div class="surgery-grid">
       <div>
         <h2>Eye MD Surgery Center</h2>
-        <p><strong>Now Open</strong></p>
-        <h3>Barrow County's First and Only Eye Surgery Center</h3>
-        <p>Cataract Surgery and Minimally Invasive Glaucoma Surgery</p>
+        <h3>Barrow County's First and Only Eye Ambulatory Surgery Center (ASC)</h3>
+        <ul class="surgery-services">
+            <li>Cataract Surgery</li>
+            <li>Minimally Invasive Glaucoma Surgery</li>
+            <li>Blepharoplasty Surgery</li>
+        </ul>
       </div>
       <div>
         <img src="assets/newOffice.jpg" alt="Eye MD Surgery Center">
